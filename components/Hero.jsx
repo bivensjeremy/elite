@@ -1,39 +1,39 @@
-import { fontTitle } from "@/config/fonts";
+'use client'
 import { siteConfig } from "@/config/site";
 import { Button } from "@heroui/button";
 import clsx from "clsx";
-import XButton from './XButton';
+import { Link } from "@heroui/link";
 
-const Hero = () => {
+const Hero = ({ componentPack }) => {
+    const { backgroundImage, title, desc, buttonText } = componentPack;
+
     return (
-        <section className="min-h-[60vh] bg-cover bg-center bg-[url('/hero.jpg')]">
-            <div className={clsx(
-                fontTitle.className,
-                "min-h-[60vh] text-start bg-black/40 justify-center flex flex-col")}>
-                <div className="container m-auto px-12 md:px-0">
-                    <h1 className={clsx('font-bold text-4xl md:text-6xl text-secondary-foreground mb-4')}>
-                        {siteConfig.name}
+        <section
+            className={`min-h-[60vh] bg-cover bg-center`}
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+        >
+            <div className="min-h-[60vh] text-start bg-black/40 justify-center flex flex-col">
+                <div className="container m-auto px-12 md:px-0 max-w-xl">
+                    <h1 className='font-bold text-4xl md:text-6xl text-secondary-foreground mb-4 text-shadow-xs text-shadow-black'>
+                        {title}
                     </h1>
 
 
                     <p className={clsx('pb-8 max-w-2xl text-secondary-foreground')}>
-                        {siteConfig.description}
+                        {desc}
                     </p>
 
                     <div>
-                        <XButton color='primary' size="lg"
-                    radius="full" />
-                        {/* <Button
+                        <Button
                             as={Link}
+                            isExternal
                             color="primary"
                             size="lg"
-                            href='/menu'
+                            href={siteConfig.company.lead}
                             variant="solid"
-                            radius="full"
-                            // className="text-white"
                             >
-                            Get an Estimate
-                        </Button> */}
+                            {buttonText}
+                        </Button>
                     </div>
                 </div>
             </div>

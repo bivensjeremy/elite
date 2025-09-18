@@ -1,37 +1,37 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Adjusters Power Washing",
-  description: "Serving all your exterior pressure washing needs.",
+  name: "Blueprint Web Dev",
+  description: "Professional Web Development Services",
   navItems: [
     {
       label: "Home",
       href: "/",
     },
     {
-      label: "Our Work",
-      href: "/services/ourwork",
+      label: "About",
+      href: "/pages/about"
     },
-    // {
-    //   label: "Services",
-    //   href: "/services",
-    // },
     {
-      label: "Contact Us",
-      href: "/services/contact",
+      label: "Services",
+      href: "/pages/services",
     },
-    // {
-    //   label: "About",
-    //   href: "/about",
-    // },
+    {
+      label: "Contact",
+      href: "/pages/contact",
+    },
   ],
   links: {
-    facebook: "https://www.facebook.com/adjusterspowerwashing",
-    // twitter: "https://twitter.com/hero_ui",
+    facebook: "https://www.facebook.com/bivensblueprint",
+    instagram: "https://www.instagram.com/bivensjeremy",
+    business: "https://www.bivensblueprint.com",
+    linkedin: "https://www.linkedin.com/in/bivensjeremy",
+    business2: "https://www.blueprintwebdev.com"
   },
   company: {
-    phone: '229-352-6684',
-    address: '1151 Dawson Rd, Albany, GA 31707',
-    email: 'torre@adjusterspowerwashing.com',
+    phone: "478-280-8388",
+    address: ["779 Fiveash Rd", "Oakfield, GA 31772"],
+    email: "admin@bivensblueprint.com",
+    lead: "https://bivensblueprintllc.hbportal.co/public/blueprintwebdevleadform"
   }
 };

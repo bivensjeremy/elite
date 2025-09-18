@@ -3,11 +3,18 @@ import { siteConfig } from '@/config/site';
 
 const Footer = () => {
     return (
-        <footer>
-            <p className='uppercase text-xs text-center'>
-                &copy; {new Date().getFullYear()} {siteConfig.name} |  Powered by <Link className='text-xs text-[#1E3A8A]' href="https://blueprintwebdev.com">Bivens Blueprint, LLC</Link>
+        <footer className="w-full flex items-center justify-center py-3">
+			<Link
+                isExternal
+                className="flex items-center gap-1 text-current"
+                href="https://blueprintwebdev.com"
+                title="BlueprintWebDev.com homepage"
+            >
+				<p className='text-xs text-center bg-background'>
+                &copy; {new Date().getFullYear()} {siteConfig.name}
             </p>
-        </footer>
+			</Link>
+		</footer>
     );
 }
 

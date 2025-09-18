@@ -1,6 +1,6 @@
 {
-  "name": "next-app-template",
-  "version": "0.0.1",
+  "name": "multipage-template-03",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -9,6 +9,7 @@
     "lint": "eslint --fix"
   },
   "dependencies": {
+    "@heroui/avatar": "^2.2.21",
     "@heroui/button": "2.2.24",
     "@heroui/card": "^2.2.23",
     "@heroui/code": "2.2.18",
@@ -25,6 +26,7 @@
     "@heroui/snippet": "2.2.25",
     "@heroui/switch": "2.2.22",
     "@heroui/system": "2.4.20",
+    "@heroui/tabs": "^2.2.23",
     "@heroui/theme": "2.4.20",
     "@react-aria/ssr": "3.9.10",
     "@react-aria/visually-hidden": "3.8.26",

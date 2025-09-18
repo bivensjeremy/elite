@@ -1,28 +1,45 @@
 import SectionHeader from './SectionHeader';
-import ContactForm from './ContactForm';
 import { siteConfig } from '@/config/site';
+import HoneyBookWidget from './HoneyBookWidget';
+import { Button } from '@heroui/button';
+import { Avatar } from '@heroui/avatar';
+import { Link } from '@heroui/link';
+import { footerData } from '@/config/data';
 
-const CTA = () => {
-
+const CTA = ({ componentPack }) => {
+    const { title, desc, buttonText } = componentPack;
     return (
-        <section id="Contact">
-            <SectionHeader title="Get a Free Estimate" />
+        <section className='text-center pt-12'>
+            <Avatar src='/BP_Logo.png' className='mx-auto w-24 h-24' />
+            <SectionHeader title={title} />
 
-            <div className="px-12 md:pb-12 flex flex-col md:flex-row mx-auto">
-                <div className="w-full md:w-lg">
-                    <ContactForm />
-                </div>
+            <p className='mb-8'>{desc}</p>
 
-                <div className="mx-auto pb-6">
-                    <div className="max-w-lg">
-                        <h4 className="font-bold text-2xl pb-4">Head Office</h4>
-                        <p>Address: {siteConfig.company.address}</p>
-                        <p className='pt-4'>Tel: {siteConfig.company.phone}</p>
-                        <p className=''>Email: {siteConfig.company.email}</p>
-                        <h4 className="pt-12 font-bold text-2xl">Employment</h4>
-                        <p>To apply for a job with {siteConfig.name}, please send a cover letter together with your C.V. to: {siteConfig.company.email}</p>
-                    </div>
-                </div>
+            <Button
+                as={Link}
+                isExternal
+                color="primary"
+                size="lg"
+                href={siteConfig.company.lead}
+                variant="solid"
+                className="font-semibold"
+                >
+                {buttonText}
+            </Button>
+
+            <div className="px-12 md:pb-12 mx-auto">
+                <HoneyBookWidget />
+            </div>
+
+            <div className="flex justify-center gap-4 text-2xl text-primary">
+                {footerData.map(({ id, link, image: Icon, color }) => (
+                    <Link isExternal key={id} href={link}>
+                        <Icon 
+                            size={16}
+                            // color={color} 
+                        />
+                    </Link>
+                ))}
             </div>
         </section>
     );

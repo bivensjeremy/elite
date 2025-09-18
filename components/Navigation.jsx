@@ -6,50 +6,49 @@ import { Link } from "@heroui/link";
 import { siteConfig } from "@/config/site";
 import { useState } from "react";
 import { Button } from "@heroui/button";
-import { Image } from "@heroui/image";
-import { ServiceData } from "./ServicesData";
 import { IoIosArrowDown } from "react-icons/io";
-import XButton from "./XButton";
+import clsx from "clsx";
+import { useTheme } from "next-themes";
+import { websiteData } from "@/config/data";
+import { Avatar } from "@heroui/avatar";
+import ThemeSwitch from './ThemeSwitch';
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { theme } = useTheme();
+    const isBranded = theme === 'dark'
+    const themeData = isBranded ? websiteData.branded : websiteData.unbranded
+    const { services } = themeData;
 
     return (
-        <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} position="static" maxWidth="full" className="bg-white">
+        <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}  maxWidth="full" className="py-4" position="static">
             <NavbarBrand>
                 <Link href="/" color="foreground" onClick={() => setIsMenuOpen(false)}>
-                    <Image
-                        src="/APW_logo3.jpg"
-                        alt="Company Logo"
-                        width={100}
-                        radius="none"
-                    />
-                <div>
-                    {/* <p className="font-bold text-inherit text-xl">{siteConfig.name}</p> */}
-                </div>
+                    <Avatar src="/BP_Logo.png" />
+
+                    <div>
+                        <p className={clsx(
+                            "font-mono ml-2 font-bold text-inherit leading-4 uppercase hidden md:block")}>Multi-Page <br/> Website 03</p>
+                    </div>
                 </Link>
             </NavbarBrand>
 
-            <NavbarMenuToggle
-                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                className="sm:hidden"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-            />
-
             {/* Desktop Navigation */}
-            <NavbarContent justify="end" className="hidden sm:flex">
-                {siteConfig.navItems.map(({ label, href }) => (
-                <NavbarItem key={label}>
-                    <Link href={href} color="foreground" isBlock>
-                    {label}
-                    </Link>
+            <NavbarContent justify="center" className="hidden lg:flex bg-secondary rounded-full px-8">
+                {siteConfig.navItems
+                .filter(({ label }) => label !== 'Services')
+                .map(({ label, href }, idx) => (
+                    <NavbarItem key={idx}>
+                        <Link href={`${href}`} className="text-primary-foreground py-4" isBlock>
+                            {label}
+                        </Link>
                 </NavbarItem>
                 ))}
 
-                <Dropdown>
+                <Dropdown className="bg-background">
                     <NavbarItem>
                         <DropdownTrigger>
-                            <Link color="foreground" 
+                            <Link className="text-primary-foreground py-4"
                             showAnchorIcon
                             anchorIcon={<IoIosArrowDown />}
                             isBlock>
@@ -64,43 +63,83 @@ const Navigation = () => {
                             base: "gap-4",
                         }}
                     >
-                        {ServiceData.map(({id, title}) => (
+                        {services.serviceData.map(({ id, title }) => (
                             <DropdownItem
                                 key={id}
-                                href={`/services/${id}`}
+                                href={`/pages/${id}`}
                                 >
                                 {title}
-                                </DropdownItem>
+                            </DropdownItem>
                         ))}
                     </DropdownMenu>
                 </Dropdown>
-
-                <XButton 
-                    color='secondary' 
-                    radius='md' 
-                    size='md' 
-                />
             </NavbarContent>
+
+            <NavbarContent justify="end">
+                <ThemeSwitch />
+
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="lg:hidden"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                />
+
+                <Button 
+                    as={Link} 
+                    color="primary" 
+                    isExternal
+                    href={siteConfig.company.lead}
+                    variant="bordered"
+                    // radius="full"
+                    className="font-semibold hidden lg:flex"
+                >
+                    Request Info
+                </Button>
+            </NavbarContent>
+                
+            
 
             {/* Mobile Navigation */}
             <NavbarMenu className="text-center pt-24">
-                {siteConfig.navItems.map(({ label, href }, index) => (
+                {siteConfig.navItems
+                .filter(({ label }) => label !== 'Services')
+                .map(({ label, href }, index) => (
                 <NavbarMenuItem key={`${label}-${index}`}>
                     <Link
-                    href={href}
-                    color="foreground"
-                    className="text-2xl pb-10"
-                    onClick={() => setIsMenuOpen(false)} // 👈 closes the menu
+                        href={href}
+                        color="foreground"
+                        className="text-2xl pb-10"
+                        onClick={() => setIsMenuOpen(false)} // 👈 closes the menu
                     >
                     {label}
                     </Link>
                 </NavbarMenuItem>
                 ))}
-                <XButton 
-                    color='secondary' 
-                    radius='md' 
-                    size='md' 
-                />
+
+                {services.serviceData.map(({ id, title }) => (
+                <NavbarMenuItem key={id}>
+                    <Link
+                        href={`/pages/${id}`}
+                        color="foreground"
+                        className="text-2xl pb-10"
+                        onClick={() => setIsMenuOpen(false)} // 👈 closes the menu
+                    >
+                        {title}
+                    </Link>
+                </NavbarMenuItem>
+                ))}
+                <Button 
+                    as={Link} 
+                    color="primary" 
+                    isExternal
+                    href={siteConfig.company.lead}
+                    variant="bordered"
+                    size="lg"
+                    // radius="full"
+                    className="font-semibold"
+                >
+                    Request Info
+                </Button>
             </NavbarMenu>
         </Navbar>
     );
