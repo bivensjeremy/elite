@@ -7,10 +7,10 @@ const WhyChoose = ({ componentPack }) => {
     const { title, whyData, image } = componentPack;
 
     return (
-        <section className='py-6'>
+        <section className='p-6'>
             <SectionHeader title={title} />
             
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto px-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto'>
                 <div className=''>
                     {whyData.map((index, idx) => (
                         <Card key={idx} className='flex flex-row py-8 mb-3 max-w-md mx-auto bg-background'>

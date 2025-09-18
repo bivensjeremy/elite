@@ -27,7 +27,7 @@ const CTA = ({ componentPack }) => {
                 {buttonText}
             </Button>
 
-            <div className="px-12 md:pb-12 mx-auto">
+            <div className="px-3 pt-3 md:pb-12 mx-auto">
                 <HoneyBookWidget />
             </div>
 

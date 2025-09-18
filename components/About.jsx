@@ -27,7 +27,7 @@ const About = ({ componentPack }) => {
                             src={img}
                             alt="Offer Image"
                             fill
-                            className="rounded-lg object-cover"
+                            className="md:rounded-lg object-cover"
                         />
                     </div>
                     </>
@@ -39,7 +39,7 @@ const About = ({ componentPack }) => {
                             src={img}
                             alt="Offer Image"
                             fill
-                            className="rounded-lg object-cover"
+                            className="md:rounded-lg object-cover"
                         />
                     </div>
                     {/* Text Block Second */}
