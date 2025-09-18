@@ -100,7 +100,7 @@ const Navigation = () => {
             
 
             {/* Mobile Navigation */}
-            <NavbarMenu className="text-center pt-24">
+            <NavbarMenu className="text-center pt-12">
                 {siteConfig.navItems
                 .filter(({ label }) => label !== 'Services')
                 .map(({ label, href }, index) => (
@@ -108,7 +108,7 @@ const Navigation = () => {
                     <Link
                         href={href}
                         color="foreground"
-                        className="text-2xl pb-10"
+                        className="text-xl pb-6"
                         onClick={() => setIsMenuOpen(false)} // 👈 closes the menu
                     >
                     {label}
@@ -121,7 +121,7 @@ const Navigation = () => {
                     <Link
                         href={`/pages/${id}`}
                         color="foreground"
-                        className="text-2xl pb-10"
+                        className="text-xl pb-6"
                         onClick={() => setIsMenuOpen(false)} // 👈 closes the menu
                     >
                         {title}

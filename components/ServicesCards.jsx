@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function ServicesCards({ services }) {
 
     return (
-        <section className='max-w-xl mx-auto'>
-            <div className="mt-12 grid gap-4 md:gap-8 sm:grid-cols-2 ">
+        <section className='max-w-xl mx-auto px-3'>
+            <div className="mt-12 grid gap-2 md:gap-8 grid-cols-2 ">
                 {services.serviceData.map(({ title, desc, id, icon: Icon }, index) => (
                     <Card 
                         isPressable

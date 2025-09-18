@@ -30,12 +30,12 @@ const page = () => {
 
     // Safe destructuring after hooks
 const matchedService = services?.serviceData?.find(
-  (service) => service.id === slug
+    (service) => service.id === slug
 );
 
 if (!matchedService) {
-  console.warn(`No service found for slug: ${slug}`);
-  return <ServicesCards services={services} />
+    console.warn(`No service found for slug: ${slug}`);
+    return <ServicesCards services={services} />
 }
 
 const { title, desc, img } = matchedService;
@@ -55,10 +55,10 @@ const { title, desc, img } = matchedService;
 
                 <Dropdown>
                     <DropdownTrigger>
-                        <Button 
-                            className="block md:hidden m-auto" 
-                            variant="bordered" 
-                            color='secondary'
+                        <Button
+                            className="md:hidden m-auto whitespace-nowrap flex items-center gap-2"
+                            variant="bordered"
+                            color="secondary"
                             endContent={<IoIosArrowDown />}
                         >
                             {title}
@@ -81,7 +81,7 @@ const { title, desc, img } = matchedService;
                 </Dropdown> 
             </div>
             
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center px-3'>
                 <h3 className='max-w-2/3 font-bold text-center text-2xl mb-4'>
                     {title}
                 </h3>
@@ -96,7 +96,7 @@ const { title, desc, img } = matchedService;
                     />
                 </div>
 
-                <p className='max-w-2/3 text-center text-xl'>
+                <p className='w-full md:w-1/2 text-center text-xl bg-secondary py-3 rounded-lg text-primary-foreground'>
                     {desc}
                 </p>
             </div>

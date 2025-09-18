@@ -19,7 +19,7 @@ const AboutPage = () => {
                 </div>
 
                 <div className='flex flex-col justify-between'>
-                    <h2 className="font-semibold text-center text-4xl md:text-5xl mb-4 text-primary">
+                    <h2 className="font-semibold text-center text-4xl md:text-5xl mb-4 text-primary max-w-3/4 mx-auto">
                             About This Project
                     </h2>
                     <div>

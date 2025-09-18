@@ -28,7 +28,7 @@ const Banner = () => {
     return (
         <div className="h-48 bg-primary text-center flex flex-col items-center justify-center p-8">
             <h1 className={clsx(
-                "font-bold text-6xl text-background uppercase text-shadow-lg text-shadow-primary max-w-3xl"
+                "font-bold text-4xl md:text-6xl text-background uppercase text-shadow-lg text-shadow-primary max-w-3xl"
             )}>
                 {title}
             </h1>

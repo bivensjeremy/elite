@@ -31,7 +31,7 @@ const CTA = ({ componentPack }) => {
                 <HoneyBookWidget />
             </div>
 
-            <div className="flex justify-center gap-4 text-2xl text-primary">
+            <div className="flex justify-center gap-4 text-2xl text-primary pt-3">
                 {footerData.map(({ id, link, image: Icon, color }) => (
                     <Link isExternal key={id} href={link}>
                         <Icon 

@@ -5,8 +5,11 @@ import { useIsSSR } from "@react-aria/ssr";
 import { Switch } from "@heroui/switch";
 import clsx from "clsx";
 import { PiNumberCircleOneFill, PiNumberCircleTwoFill } from "react-icons/pi";
+import { useEffect, useState } from "react";
 
 export default function ThemeSwitch({ className }) {
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => setMounted(true), []);
     const { theme, setTheme } = useTheme();
     const isSSR = useIsSSR();
     const isLight = theme === "light" || isSSR;
@@ -15,6 +18,8 @@ export default function ThemeSwitch({ className }) {
         setTheme(isLight ? "dark" : "light");
     };
 
+    if (!mounted) return null;
+    
     return (
         <div>
             <Switch
