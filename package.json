@@ -1,6 +1,6 @@
 {
   "name": "elite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -27,7 +27,7 @@
     "@heroui/switch": "2.2.22",
     "@heroui/system": "2.4.20",
     "@heroui/tabs": "^2.2.23",
-    "@heroui/theme": "2.4.20",
+    "@heroui/theme": "^2.4.23",
     "@react-aria/ssr": "3.9.10",
     "@react-aria/visually-hidden": "3.8.26",
     "clsx": "2.1.1",
