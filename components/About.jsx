@@ -16,7 +16,7 @@ const About = ({ componentPack }) => {
                     {/* Text Block First */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center p-6">
                         <div className="max-w-md">
-                            <h2 className="font-bold text-3xl mb-2">{title}</h2>
+                            <h2 className="font-bold text-3xl mb-2 text-accent">{title}</h2>
                             <p>{desc}</p>
                         </div>
                         
@@ -45,7 +45,7 @@ const About = ({ componentPack }) => {
                     {/* Text Block Second */}
                     <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center p-6 lg:order-2 order-1">
                         <div className="max-w-md">
-                            <h2 className="font-bold text-3xl mb-2">{title}</h2>
+                            <h2 className="font-bold text-3xl mb-2 text-accent">{title}</h2>
                             <p>{desc}</p>
                         </div>
                         

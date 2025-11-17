@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Blueprint Web Dev",
+  name: "Elite Lawn - DRAFT Blueprint Web Dev",
   description: "Professional Web Development Services",
   navItems: [
     {
@@ -17,6 +17,10 @@ export const siteConfig = {
       href: "/pages/services",
     },
     {
+      label: "Gallery",
+      href: "/pages/gallery",
+    },
+    {
       label: "Contact",
       href: "/pages/contact",
     },
@@ -29,7 +33,7 @@ export const siteConfig = {
     business2: "https://www.blueprintwebdev.com"
   },
   company: {
-    phone: "478-280-8388",
+    phone: "810-441-1742",
     address: ["779 Fiveash Rd", "Oakfield, GA 31772"],
     email: "admin@bivensblueprint.com",
     lead: "https://bivensblueprintllc.hbportal.co/public/blueprintwebdevleadform"

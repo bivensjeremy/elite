@@ -15,7 +15,7 @@ export default function ThemeSwitch({ className }) {
     const isLight = theme === "light" || isSSR;
 
     const toggleTheme = () => {
-        setTheme(isLight ? "dark" : "light");
+        setTheme(isLight ? "light" : "light");
     };
 
     if (!mounted) return null;

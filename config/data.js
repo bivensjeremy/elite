@@ -217,6 +217,139 @@ export const websiteData = {
         },
     
     },
+    elite: { // Elite Pro Copy 
+    hero: {
+        backgroundImage: '/elite_banner.webp',
+        title: 'Elite Lawn & Landscape',
+        desc: 'Premium lawn care and landscaping delivered with precision, pride, and year-round reliability.',
+        buttonText: 'Get a Free Quote'
+    },
+
+    about: {
+        title: 'About Us',
+        aboutData: [
+            {
+                id: 1,
+                title: 'Built for Beautiful, Worry-Free Lawns',
+                desc: "We’re a locally owned lawn and landscape team dedicated to keeping your property in its best shape season after season. Every project is handled with professionalism, attention to detail, and a commitment to results you can immediately see. From routine mowing to full outdoor transformations, we treat your yard like it’s our own.",
+                img: '/elite_image_01.webp'
+            },
+            {
+                id: 2,
+                title: 'A Trusted Partner for Homeowners & Businesses',
+                desc: `Your property reflects your home or your brand, and we’re here to help you elevate it. We support residential neighborhoods, commercial locations, and multi-property clients with dependable service plans tailored to your needs. Whether it’s weekly care or full-service landscaping, we deliver consistent quality that keeps your space looking sharp.`,
+                img: '/elite_image_02.webp'
+            },
+            {
+                id: 3,
+                title: 'Craftsmanship Backed by Expertise',
+                desc: `Healthy turf and beautiful landscapes don’t happen by accident. Our team brings professional training, modern equipment, and proven techniques to every job. From lawn treatments and edging to cleanup and plant care, we build outdoor systems that support long-term health and curb appeal.`,
+                img: '/elite_image_03.webp'
+            },
+            {
+                id: 4,
+                title: 'Service Rooted in Reliability',
+                desc: `Our reputation is built on trust—showing up when we say we will, communicating clearly, and delivering flawless results. Clients choose us because we combine small-town values with top-tier service standards. If you're looking for a lawn care partner who cares as much as you do, you’re in the right place.`,
+                img: '/elite_image_04.jpeg'
+            }
+        ]
+    },
+
+    cta: {
+        title: 'Ready for a Lawn You’ll Love?',
+        desc: "Whether you need recurring maintenance or a complete landscape upgrade, we're here to make your property look its best.",
+        buttonText: 'Request a Free Quote'
+    },
+
+    why: {
+        title: 'Why Homeowners Choose Elite',
+        image: '/image_10.jpg',
+        whyData: [
+            'Fast, friendly communication',
+            'Honest pricing with no surprises',
+            'Fully licensed and insured team',
+            'Quality guaranteed on every service',
+            'Local professionals who care'
+        ]
+    },
+
+    testimonials: {
+        title: 'What Our Clients Say',
+        testimonialData: [
+            {
+                quote: 'Elite keeps my yard looking better than ever. Reliable, professional, and worth every penny.',
+                name: 'Alex R.',
+                title: 'Homeowner'
+            },
+            {
+                quote: 'Our business lawn has never looked cleaner or more welcoming. The team is always on time and easy to work with.',
+                name: 'Jordan M.',
+                title: 'Small Business Owner'
+            }
+        ]
+    },
+
+    services: {
+        title: 'Our Services',
+        desc: 'From basic lawn maintenance to custom projects, we have services to keep your property healthy, clean, and beautiful.',
+        serviceData: [
+            {
+                id: 1,
+                title: 'Residential Lawn Care Maintenance',
+                desc: 'Professional mowing, edging, and trimming that keeps your yard neat, clean, and consistently well-kept.',
+                img: '/elite_residential.webp',
+                icon: GoTools,
+                alt: [],
+                price: '$50.00'
+            },
+            {
+                id: 2,
+                title: 'Spring + Fall Property Cleanups',
+                desc: 'Leaf removal, debris clearing, and property refresh services that prepare your lawn for every season.',
+                img: '/elite_spring.webp',
+                icon: GoCodeOfConduct,
+                alt: ['/image_06.jpg', '/image_04.jpg', '/image_05.jpg'],
+                price: '$200.00'
+            },
+            {
+                id: 3,
+                title: 'Landscape Maintenance + Design',
+                desc: 'From flower beds to shrubs and fresh layouts, we design and install outdoor spaces that thrive.',
+                img: '/elite_landscape.webp',
+                icon: GoDeviceDesktop,
+                alt: ['/image07.jpg', '/image08.jpg', '/image09.jpg', '/image10.jpg', '/image11.jpg'],
+                price: '$100.00'
+            },
+            {
+                id: 4,
+                title: 'Commercial Lawn Care Maintenance',
+                desc: 'Bush trimming, garden care, mulching, and all the outdoor upkeep needed to boost curb appeal.',
+                img: '/elite_commercial.webp',
+                icon: GoSquirrel,
+                alt: [],
+                price: '$125.00'
+            },
+            {
+                id: 5,
+                title: 'Industrial Lawn Care Maintenance',
+                desc: 'Bush trimming, garden care, mulching, and all the outdoor upkeep needed to boost curb appeal.',
+                img: '/elite_industrial.webp',
+                icon: GoSquirrel,
+                alt: [],
+                price: '$125.00'
+            },
+            {
+                id: 6,
+                title: 'Residential Roof + House Soft Washing',
+                desc: 'Bush trimming, garden care, mulching, and all the outdoor upkeep needed to boost curb appeal.',
+                img: '/elite_roof.webp',
+                icon: GoSquirrel,
+                alt: [],
+                price: '$250.00'
+            }
+        ]
+    }
+},
 };
 
 export const contactData = [

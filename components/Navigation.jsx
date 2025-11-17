@@ -17,18 +17,18 @@ const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { theme } = useTheme();
     const isBranded = theme === 'dark'
-    const themeData = isBranded ? websiteData.branded : websiteData.unbranded
+    const themeData =  websiteData.elite
     const { services } = themeData;
 
     return (
         <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}  maxWidth="full" className="py-4" position="static">
             <NavbarBrand>
-                <Link href="/" color="foreground" onClick={() => setIsMenuOpen(false)}>
-                    <Avatar src="/BP_Logo.png" />
+                <Link href="/" color="background" onClick={() => setIsMenuOpen(false)}>
+                    <Avatar src="/elite_logo.webp" />
 
                     <div>
                         <p className={clsx(
-                            "font-mono ml-2 font-bold text-inherit leading-4 uppercase hidden md:block")}>Multi-Page <br/> Website 03</p>
+                            "font-mono ml-2 font-bold text-inherit leading-4 uppercase hidden md:block")}>Elite Lawn <br/>& Landscape</p>
                     </div>
                 </Link>
             </NavbarBrand>
@@ -39,7 +39,7 @@ const Navigation = () => {
                 .filter(({ label }) => label !== 'Services')
                 .map(({ label, href }, idx) => (
                     <NavbarItem key={idx}>
-                        <Link href={`${href}`} className="text-primary-foreground py-4" isBlock>
+                        <Link href={`${href}`} className="text-background py-4" isBlock>
                             {label}
                         </Link>
                 </NavbarItem>
@@ -48,11 +48,11 @@ const Navigation = () => {
                 <Dropdown className="bg-background">
                     <NavbarItem>
                         <DropdownTrigger>
-                            <Link className="text-primary-foreground py-4"
+                            <Link className="text-background py-4"
                             showAnchorIcon
                             anchorIcon={<IoIosArrowDown />}
                             isBlock>
-                                Services
+                                Our Services
                             </Link>
                         </DropdownTrigger>
                     </NavbarItem>
@@ -76,7 +76,7 @@ const Navigation = () => {
             </NavbarContent>
 
             <NavbarContent justify="end">
-                <ThemeSwitch />
+                {/* <ThemeSwitch /> */}
 
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -88,12 +88,12 @@ const Navigation = () => {
                     as={Link} 
                     color="primary" 
                     isExternal
-                    href={siteConfig.company.lead}
+                    href={siteConfig.company.phone}
                     variant="bordered"
                     // radius="full"
                     className="font-semibold hidden lg:flex"
                 >
-                    Request Info
+                    Call Us Today!
                 </Button>
             </NavbarContent>
                 

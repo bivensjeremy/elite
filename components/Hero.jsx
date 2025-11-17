@@ -12,7 +12,7 @@ const Hero = ({ componentPack }) => {
             className={`min-h-[60vh] bg-cover bg-center`}
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
-            <div className="min-h-[60vh] text-start bg-black/40 justify-center flex flex-col">
+            <div className="min-h-[60vh] text-start bg-black/60 justify-center flex flex-col">
                 <div className="container m-auto px-12 md:px-0 max-w-xl">
                     <h1 className='font-bold text-4xl md:text-6xl text-secondary-foreground mb-4 text-shadow-xs text-shadow-black'>
                         {title}

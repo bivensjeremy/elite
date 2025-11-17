@@ -10,13 +10,13 @@ const Banner = () => {
     const { resolvedTheme } = useTheme();
     const isBranded = resolvedTheme === 'dark';
 
-    const { services } = isBranded ? websiteData.branded : websiteData.unbranded;
+    const { services } = websiteData.elite;
 
     const slug = pathname.split('/').filter(Boolean).pop();
 
     const staticRoutes = {
         about: 'About',
-        contact: 'Contact Blueprint Web Dev'
+        contact: 'Contact Elite Lawn & Landscape'
     };
 
     const matchedService = services.serviceData.find(

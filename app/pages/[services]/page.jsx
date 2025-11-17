@@ -21,7 +21,7 @@ const page = () => {
     const slug = pathname.split('/').filter(Boolean).pop();
 
     // const themeData = useMemo(() => {
-        const themeData = isBranded ? websiteData.branded : websiteData.unbranded;
+        const themeData = websiteData.elite;
     // }, [isBranded]);
 
     const { services } = themeData;
@@ -43,7 +43,7 @@ const { title, desc, img } = matchedService;
     return (
         <div>
             <div className='py-6 text-center'>
-                <ButtonGroup className='m-auto hidden md:block' variant='bordered' color='secondary'>
+                {/* <ButtonGroup className='m-auto hidden md:block' variant='bordered' color='secondary'>
                     {services.serviceData.map(({ id, title }) => (
                         <Button
                             key={id}
@@ -51,9 +51,9 @@ const { title, desc, img } = matchedService;
                             href={`/pages/${id}`}
                         >{title}</Button>
                     ))}
-                </ButtonGroup>
+                </ButtonGroup> */}
 
-                <Dropdown>
+                {/* <Dropdown>
                     <DropdownTrigger>
                         <Button
                             className="md:hidden m-auto whitespace-nowrap flex items-center gap-2"
@@ -78,10 +78,10 @@ const { title, desc, img } = matchedService;
                             >{title}</DropdownItem>
                     ))}
                     </DropdownMenu>
-                </Dropdown> 
+                </Dropdown>  */}
             </div>
             
-            <div className='flex flex-col items-center px-3'>
+            {/* <div className='flex flex-col items-center px-3'>
                 <h3 className='max-w-2/3 font-bold text-center text-2xl mb-4'>
                     {title}
                 </h3>
@@ -99,7 +99,7 @@ const { title, desc, img } = matchedService;
                 <p className='w-full md:w-1/2 text-center text-xl bg-secondary py-3 rounded-lg text-primary-foreground'>
                     {desc}
                 </p>
-            </div>
+            </div> */}
         </div>
     );
 }

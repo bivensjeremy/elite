@@ -19,19 +19,22 @@ const ContactForm = () => {
             <Input 
                 label="Name"
                 type='text'
-                radius='none'
+                className='border rounded-xl'
+                // radius='none'
             />
 
             <Input
                 label="Email"
                 type='email'
-                radius='none'
+                className='border rounded-xl'
+                // radius='none'
             />
 
             <Select
                 // className="max-w-xs" 
                 label="Subject"
-                radius='none'
+                className='border rounded-xl'
+                // radius='none'
                 defaultSelectedKeys={["estimate"]}
             >
                 {animals.map((animal) => (
@@ -42,12 +45,12 @@ const ContactForm = () => {
 
             <Textarea
                 label="Message" 
-                radius='none'
+                className='border rounded-xl'
             />
 
             <div className='flex justify-end w-full'>
-                <Button radius='none' size='lg' color='primary'>
-                    Send
+                <Button size='lg' color='primary'>
+                    Submit
                 </Button>
             </div>
         </Form>

@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 export const metadata = {
 	title: {
-			default: 'Multi-Page Site Template | '+ siteConfig.name,
+			default: siteConfig.name,
 			template: `%s - ${siteConfig.name}`,
 	},
 	description: siteConfig.description,
@@ -45,12 +45,12 @@ export const metadata = {
 	],
 };
 
-export const viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0f4c81" }, // branded
-    { media: "(prefers-color-scheme: dark)", color: "#374151" },  // unbranded
-  ],
-};
+// export const viewport = {
+//   themeColor: [
+//     { media: "(prefers-color-scheme: light)", color: "#0f4c81" }, // branded
+//     { media: "(prefers-color-scheme: dark)", color: "#374151" },  // unbranded
+//   ],
+// };
 
 export default function RootLayout({children}) {
 	return (

@@ -17,9 +17,11 @@ useEffect(() => setMounted(true), []);
 const { theme } = useTheme();
 const isBranded = theme === 'dark';
 
-const themeData = useMemo(() => {
-  return isBranded ? websiteData.branded : websiteData.unbranded;
-}, [isBranded]);
+// const themeData = useMemo(() => {
+//   return isBranded ? websiteData.branded : websiteData.unbranded;
+// }, [isBranded]);
+
+const themeData = websiteData.elite
 
 const { hero, about, cta, why, services, testimonials } = themeData;
 
