@@ -35,7 +35,7 @@ export const siteConfig = {
   company: {
     phone: "810-441-1742",
     address: ["779 Fiveash Rd", "Oakfield, GA 31772"],
-    email: "admin@bivensblueprint.com",
+    email: "elitelawnsolutiohn@gmail.com",
     lead: "https://bivensblueprintllc.hbportal.co/public/blueprintwebdevleadform"
   }
 };

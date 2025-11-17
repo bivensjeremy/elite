@@ -11,7 +11,7 @@ const Services = ({ componentPack }) => {
             <SectionHeader title={title} />
             <p className="text-center max-w-lg mb-4 mx-auto">{desc}</p>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto">
                 {serviceData.map(({ id, price, desc, img }) => (
                     <Card key={id} className="max-w-sm mx-auto bg-background">
                         <CardBody className="">
